@@ -15,10 +15,10 @@ def remove_duplicates(nums)
     pointer_two +=1
   end
 
-  removal.reverse_each { | index |
+  removal.reverse_each do | index |
     nums.delete_at(index)
     nums.append('_')
-  }
+  end
   nums.size - removal.size
 end
 
